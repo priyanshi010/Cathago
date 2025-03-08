@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics Dashboard</title>
+    <link rel="stylesheet" href="./style/dashboardStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Analytics</h2>
+        <a href="#" onclick="showPage(1)" class="active">Scans/Topics</a>
+        <a href="#" onclick="showPage(2)">Top Users by Scans</a>
+        <a href="#" onclick="showPage(3)">Credit Usage Stats</a>
+        <a href="#" onclick="showPage(4)">Scans per User</a>
+        <a href="#" onclick="showPage(5)">Approved/Pending</a>
+        <a href="#" onclick="showPage(6)">Activity logs</a>
+        <div class="logout-section">
+            <button onclick="logout()" class="logout-btn">
+                <img src="./public/logout3.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Dashboard</h1>
+
+        <div id="page1" class="page">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h2>Total Scans Today</h2>
+                    <p id="total-scans">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Top Scanned Topics</h2>
+                    <p id="top-topics">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="page2" class="page">
+            <h2>Top Users by Scans</h2>
+            <canvas id="topUsersChart"></canvas>
+        </div>
+
+        <div id="page3" class="page">
+            <h2>Daily Credit Usage Stats</h2>
+            <canvas id="creditChart"></canvas>
+            <input type="text" id="searchCreditsUser" placeholder="Search by Uid" onkeyup="filterCreditsTable()">
+            <table id="credit-scans-table">
+                <thead>
+                    <tr>
+                        <th>Uid</th>
+                        <th>Username</th>
+                        <th>Credits Used</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+<div id="page4" class="page">
+    <h2>Scans per User</h2>
+    <input type="text" id="searchUser" placeholder="Search by Uid" onkeyup="filterScansTable()">
+    <table id="user-scans-table">
+        <thead>
+            <tr>
+                <th>Uid</th>
+                <th>Username</th>
+                <th>Scans Today</th>
+                <th>Total Scans</th>
+                <th>Remaining Credits</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+<div id="page5" class="page">
+    <h2>Pending Credit Requests</h2>
+    <table id="pending-credit-requests">
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Username</th>
+                <th>Requested Credits</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="processed-credit-requests">
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Username</th>
+                <th>Requested Credits</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+<div id="page6" class="page">
+    <h2>User Activity Logs</h2>
+    <input type="text" id="searchActivity" placeholder="Search by Username" onkeyup="filterActivityTable()">
+    <table id="activity-logs-table">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Username</th>
+                <th>Action</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+
+
+
+    <script src="./dashboard.js"></script>
+</body>
+</html>

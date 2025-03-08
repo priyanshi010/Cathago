@@ -1,0 +1,235 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    /* background-color: #01011f; */
+    margin: 0;
+    position: relative;
+    overflow-y: auto;
+}
+
+
+body::before {
+    content: "";
+    background: url('../public/IMG_8995.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.4; /* Adjust transparency as desired */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures background stays behind content */
+}
+
+
+.sidebar {
+    height: 80%;
+    width: 200px;
+    position: fixed;
+    background-color: #ffffff;
+    color: white;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    padding-inline: 20px;
+    text-align: center;
+    background: url('../public/IMG_8997.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    margin:5px;
+    border-radius: 20px;
+}
+
+
+.sidebar h2 {
+    color: black;
+    margin-bottom: 50px;
+}
+
+.sidebar a.active {
+    background: url('../public/IMG_899942.jpeg') no-repeat center center fixed;
+    background-size: cover;    
+    color:white;
+}
+
+/* Logout button styling */
+.logout-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.logout-btn{
+    border-style: none;
+    background-color: #ffffff;
+    margin-top: 150px;
+    background: url('../public/IMG_8997.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.logout-btn img{
+    height: 200px;
+    cursor: pointer;
+    height: 30px;
+}
+
+/* Content area */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: #505357;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    background: url('../public/IMG_899942.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#top-topics{
+    margin-top: 100px;
+}
+
+#total-scans{
+    margin-top: 25%;
+    font-size: 80px;
+}
+
+#topics{
+    width: 50%;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    height: 800px;
+    
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+}
+
+
+th {
+    background: url('../public/IMG_899942.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+
+/* Hide all pages initially */
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+
+/* Make #top-topics a scrollable container */
+#top-topics {
+    margin-top: 80px;
+    max-height: 300px;  /* Set a max height for scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    padding: 10px;
+    background: url('../public/IMG_899942.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Optional: Customize scrollbar */
+#top-topics::-webkit-scrollbar {
+    width: 6px;
+}
+
+#top-topics::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+#top-topics::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.highlight-topic {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+table tbody tr:nth-child(odd) {
+    background: url('../public/IMG_8997.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 80px;
+}
+
+table tbody tr:nth-child(even) {
+    background: url('../public/IMG_899942.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100px;
+}
+
+#searchUser{
+    border-style: none;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 40px;
+    width: 300px;
+    padding: 10px;
+}
+
+#searchCreditsUser{
+    border-style: none;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 40px;
+    width: 300px;
+    padding: 10px;
+}
+
+#searchActivity
+{
+    border-style: none;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 40px;
+    width: 300px;
+    padding: 10px;
+}
+
