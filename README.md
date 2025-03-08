@@ -50,26 +50,6 @@ The backend will run on `http://localhost:3000`.
 
 ---
 
-## Screenshots
----
-
-### Screenshot 1
-<img src="Images/Screenshot (16).png" alt="Screenshot 1" width="600">
-
-### Screenshot 2
-<img src="Images/Screenshot (17).png" alt="Screenshot 2" width="600">
-
-### Screenshot 2
-<img src="Images/Screenshot (19).png" alt="Screenshot 2" width="600">
-
-### Screenshot 2
-<img src="Images/Screenshot (20).png" alt="Screenshot 2" width="600">
-
-### Screenshot 2
-<img src="Images/Screenshot (22).png" alt="Screenshot 2" width="600">
-
----
-
 ## API Routes
 ### **Authentication**
 | Method | Endpoint | Description |
@@ -295,14 +275,5 @@ This document provides API endpoints for both Admin and User roles, detailing th
 - Responses are JSON formatted.
 - Use appropriate HTTP methods (`GET`, `POST`).
 - Ensure the request body is correctly formatted when sending `POST` requests.
-
-
-
----
-
-## Authors
-- Ayush Singh Rathore
-
----
 
 
